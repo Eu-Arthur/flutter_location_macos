@@ -1,0 +1,28 @@
+name: location_macos
+description: MacOS implementation of the location plugin
+homepage: https://docs.page/Lyokone/flutterlocation
+repository: https://github.com/Lyokone/flutterlocation
+version: 6.0.0-dev.1
+
+environment:
+  sdk: ">=3.0.0"
+  flutter: ">=3.0.0"
+
+flutter:
+  plugin:
+    implements: location
+    platforms:
+      macos:
+        pluginClass: LocationPlugin
+        dartPluginClass: LocationMacOS
+
+dependencies:
+  flutter:
+    sdk: flutter
+  location_platform_interface:
+    git:
+      url: https://github.com/Eu-Arthur/flutter_location_platform_interface.git
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^3.0.0
